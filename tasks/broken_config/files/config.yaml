@@ -1,0 +1,17 @@
+# inventoryd configuration
+service:
+  name: inventoryd
+  listen_host: 0.0.0.0
+  listen_port: "eighty-eighty"
+
+storage:
+  backend: sqlite
+	path: /var/lib/inventoryd/inventory.db
+
+engine:
+  workers: four
+  queue_depth: 256
+
+logging:
+  level: verbose
+  dir: /var/log/inventoryd

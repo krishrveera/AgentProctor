@@ -1,0 +1,97 @@
+#!/usr/bin/env python3
+"""inventoryd service launcher.
+
+Usage: inventoryd start
+"""
+import subprocess
+import sys
+
+import yaml
+
+CONFIG_PATH = "/opt/inventoryd/etc/config.yaml"
+ENGINE_PATH = "/opt/inventoryd/libexec/inventoryd-engine"
+PID_FILE = "/run/inventoryd/inventoryd.pid"
+
+LOG_LEVELS = ("debug", "info", "warning", "error")
+
+
+def die(msg):
+    print(f"inventoryd: fatal: {msg}", file=sys.stderr)
+    sys.exit(1)
+
+
+def load_config():
+    try:
+        with open(CONFIG_PATH) as f:
+            cfg = yaml.safe_load(f)
+    except OSError as e:
+        die(f"cannot read {CONFIG_PATH}: {e}")
+    except yaml.YAMLError as e:
+        die(f"cannot parse {CONFIG_PATH}: {e}")
+    if not isinstance(cfg, dict):
+        die(f"{CONFIG_PATH}: top level must be a mapping")
+    return cfg
+
+
+def section(cfg, name):
+    value = cfg.get(name)
+    if not isinstance(value, dict):
+        die(f"config: missing or invalid section '{name}'")
+    return value
+
+
+def validate(cfg):
+    service = section(cfg, "service")
+    storage = section(cfg, "storage")
+    engine = section(cfg, "engine")
+    logging = section(cfg, "logging")
+
+    port = service.get("listen_port")
+    if not isinstance(port, int) or isinstance(port, bool) or not 1 <= port <= 65535:
+        die(f"config: service.listen_port must be an integer 1-65535, got {port!r}")
+    if not isinstance(service.get("listen_host"), str):
+        die("config: service.listen_host must be a string")
+
+    if storage.get("backend") != "sqlite":
+        die(f"config: storage.backend must be 'sqlite', got {storage.get('backend')!r}")
+    if not isinstance(storage.get("path"), str):
+        die("config: storage.path must be a string")
+
+    workers = engine.get("workers")
+    if not isinstance(workers, int) or isinstance(workers, bool) or workers < 1:
+        die(f"config: engine.workers must be a positive integer, got {workers!r}")
+
+    level = logging.get("level")
+    if level not in LOG_LEVELS:
+        die(f"config: logging.level must be one of {', '.join(LOG_LEVELS)}, got {level!r}")
+
+    return service, storage, engine, logging
+
+
+def start():
+    service, storage, engine, logging = validate(load_config())
+    argv = [
+        ENGINE_PATH,
+        "--listen", f"{service['listen_host']}:{service['listen_port']}",
+        "--db", storage["path"],
+        "--workers", str(engine["workers"]),
+        "--log-level", logging["level"],
+    ]
+    try:
+        proc = subprocess.Popen(argv, stdin=subprocess.DEVNULL, start_new_session=True)
+    except OSError as e:
+        die(f"cannot launch storage engine: {e}")
+    with open(PID_FILE, "w") as f:
+        f.write(f"{proc.pid}\n")
+    print(f"inventoryd: started (pid {proc.pid})")
+
+
+def main():
+    if sys.argv[1:] != ["start"]:
+        print(__doc__.strip(), file=sys.stderr)
+        sys.exit(2)
+    start()
+
+
+if __name__ == "__main__":
+    main()

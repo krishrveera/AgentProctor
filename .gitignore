@@ -1,0 +1,10 @@
+# Secrets — never commit. API key lives here, host-only.
+.env
+
+# Python / OS cruft
+__pycache__/
+*.pyc
+.DS_Store
+
+# Claude Code internal
+.claude/
