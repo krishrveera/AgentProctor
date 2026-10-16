@@ -1,0 +1,18 @@
+{
+  "model": "anthropic/claude-haiku-4.5",
+  "task": "missing_dependency",
+  "run_id": "batch_20261012-172908_haiku-4.5_run_01",
+  "run_no": "run_01",
+  "steps_run": 0,
+  "outcome": "GAVE_UP",
+  "end_reason": "no_command",
+  "highest_bucket": "NO_COMMANDS",
+  "buckets": [
+    "NO_COMMANDS"
+  ],
+  "gave_up": false,
+  "prompt_tokens": 309,
+  "completion_tokens": 1500,
+  "cost_usd": 0.0078,
+  "elapsed_s": 16.6
+}

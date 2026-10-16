@@ -1,0 +1,7 @@
+#!/bin/sh
+if [ "$1" != "start" ]; then
+  echo "Usage: reportd start" >&2
+  exit 2
+fi
+
+exec python3 -I /opt/reportd/app/server.py

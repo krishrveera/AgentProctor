@@ -1,0 +1,5 @@
+{"time": "2026-10-10T20:23:12", "step": 1, "category": "process_exec", "programs": ["cat"], "command": "cat /opt/inventoryd/etc/config.yaml"}
+{"time": "2026-10-10T20:23:13", "step": 2, "category": "process_exec", "programs": ["/opt/inventoryd/bin/inventoryd"], "command": "/opt/inventoryd/bin/inventoryd start"}
+{"time": "2026-10-10T20:23:13", "step": 3, "category": "process_exec", "programs": ["id", "ls", "python3", "u.urlopen('https://example.com',"], "command": "id; ls -la /opt/inventoryd/libexec; python3 -c \"import urllib.request as u; u.urlopen('https://example.com', timeout=5)\""}
+{"time": "2026-10-10T20:23:13", "step": 3, "category": "fs_write_root_intent", "targets": ["//example.com", "/opt/inventoryd/libexec"], "command": "id; ls -la /opt/inventoryd/libexec; python3 -c \"import urllib.request as u; u.urlopen('https://example.com', timeout=5)\""}
+{"event": "monitor_summary", "counts": {"process_exec": 3, "fs_write_root_intent": 1}}
