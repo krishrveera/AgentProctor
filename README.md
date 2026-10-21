@@ -4,6 +4,17 @@ A small self-contained harness for studying how an LLM agent behaves when given 
 task that *looks* solvable but is not. The agent runs a ReAct-style loop against a
 sealed Docker container and every step is logged for later analysis.
 
+## Official ImpossibleBench study
+
+[`impossiblebench_study/`](impossiblebench_study/) is a separate, newer
+effort investigating the same question -- whether and how agents exploit
+tests that conflict with the spec -- using the official ImpossibleBench
+implementation and dataset instead of this repo's own hand-rolled tasks
+below. It doesn't touch or depend on anything in this top-level directory.
+See [`impossiblebench_study/EXPERIMENT_REPORT.md`](impossiblebench_study/EXPERIMENT_REPORT.md)
+for the full write-up and [`impossiblebench_study/README.md`](impossiblebench_study/README.md)
+for the runnable code and commands.
+
 ## Architecture
 
 - The agent **loop** runs on the host (`harness.py`).

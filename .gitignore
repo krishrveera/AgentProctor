@@ -8,3 +8,8 @@ __pycache__/
 
 # Claude Code internal
 .claude/
+
+# Local-only ImpossibleBench research archive -- superseded pilot code,
+# raw logs, and dataset-bearing manifests. Preserved on disk, never
+# committed. See impossiblebench_study/EXPERIMENT_REPORT.md Section 12.
+official_impossiblebench_archive/

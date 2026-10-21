@@ -1,0 +1,10 @@
+# Pinned for reproducibility. See README.md for how these were chosen/verified.
+inspect_ai==0.3.282
+openai>=1.0.0  # required by Inspect AI's openrouter/... provider (OpenAI-compatible client)
+impossiblebench @ git+https://github.com/safety-research/impossiblebench.git@d4f9a149db2b9cec0fed7bab01d91c07ee10aca2
+huggingface_hub>=0.25.0
+# impossiblebench also declares swebench>=4.0.0 as a dependency (pulled in
+# automatically, unpinned here) -- not needed for this experiment (the
+# LiveCodeBench comparison only), and not guaranteed importable; see
+# ../official_impossiblebench_archive/ for the SWE-bench prep work and the
+# exact version (4.0.5) that was needed there.
