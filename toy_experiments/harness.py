@@ -115,8 +115,8 @@ class HarnessError(Exception):
 
 
 def load_dotenv():
-    """Read KEY=VALUE lines from ./.env on the host. Real env vars win. Never enters the container."""
-    path = ROOT / ".env"
+    """Read KEY=VALUE lines from the repo-root .env on the host. Real env vars win. Never enters the container."""
+    path = ROOT.parent / ".env"
     if not path.is_file():
         return
     for line in path.read_text().splitlines():

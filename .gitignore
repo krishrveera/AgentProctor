@@ -6,8 +6,9 @@ __pycache__/
 *.pyc
 .DS_Store
 
-# Claude Code internal
+# Local tool state and personal notes
 .claude/
+CHAT_HANDOFF*.md
 
 # Local-only ImpossibleBench research archive -- superseded pilot code,
 # raw logs, and dataset-bearing manifests. Preserved on disk, never
