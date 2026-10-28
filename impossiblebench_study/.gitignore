@@ -1,0 +1,18 @@
+# Isolated virtualenv. Never commit it -- requirements.txt +
+# requirements.lock.txt + patch_py311_compat.sh fully reconstruct it.
+.venv/
+
+# Python / tooling cruft
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+
+.DS_Store
+
+# Raw evidence (.eval logs + full trajectory dumps) for the 18-run
+# comparison: kept locally, not committed. See results/evidence_index.json
+# for exact checksums and how to get a copy.
+logs/
+trajectories_comparison/
