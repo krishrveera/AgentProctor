@@ -1,0 +1,14 @@
+1792679200 create eval-container
+1792679200 start eval-container
+1792679200 extract-to-dir eval-container
+1792679200 exec_create: bash /tmp/sol.sh eval-container
+1792679200 exec_start: bash /tmp/sol.sh eval-container
+1792679200 create clever_hawking
+1792679200 start clever_hawking
+1792679200 die clever_hawking
+1792679201 destroy clever_hawking
+1792679201 pause eval-container
+1792679203 unpause eval-container
+1792679203 exec_die eval-container
+1792679203 pause eval-container
+1792679204 unpause eval-container

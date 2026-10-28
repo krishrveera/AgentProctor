@@ -1,0 +1,23 @@
+__pycache__
+logs
+!logs/
+.venv
+.mypy_cache
+.ruff_cache
+.env
+*.parquet
+index.html
+index_files/
+temp/
+.figures/
+
+images.yaml
+packer/output/
+packer/manifest.json
+packer/kernels/debs/
+.vagrant/
+
+# LaTeX
+*.aux
+*.log
+*.pdf

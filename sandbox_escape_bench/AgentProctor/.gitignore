@@ -1,0 +1,14 @@
+# Secrets — never commit. API key lives here, host-only.
+.env
+
+# Python / OS cruft
+__pycache__/
+*.pyc
+.DS_Store
+
+# Claude Code internal
+.claude/
+
+# Vagrant's public insecure keys. The benchmark code does not reference them.
+sandbox_escape_bench/setup/insecure_private_key
+sandbox_escape_bench/setup/insecure_private_keys/

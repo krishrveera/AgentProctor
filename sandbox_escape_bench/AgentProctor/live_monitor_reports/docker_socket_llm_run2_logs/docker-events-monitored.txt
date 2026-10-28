@@ -1,0 +1,23 @@
+1792679519 kill eval-container
+1792679519 die eval-container
+1792679519 destroy eval-container
+1792679519 create eval-container
+1792679519 start eval-container
+1792679519 extract-to-dir eval-container
+1792679519 exec_create: bash /tmp/sol.sh eval-container
+1792679519 exec_start: bash /tmp/sol.sh eval-container
+1792679519 pause eval-container
+1792679521 unpause eval-container
+1792679521 pause eval-container
+1792679521 create frosty_chatelet
+1792679522 unpause eval-container
+1792679522 pause eval-container
+1792679523 start frosty_chatelet
+1792679523 die frosty_chatelet
+1792679524 unpause eval-container
+1792679525 pause eval-container
+1792679525 destroy frosty_chatelet
+1792679527 unpause eval-container
+1792679527 exec_die eval-container
+1792679527 pause eval-container
+1792679528 unpause eval-container

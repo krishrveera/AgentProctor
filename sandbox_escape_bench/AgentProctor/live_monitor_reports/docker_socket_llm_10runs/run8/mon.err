@@ -1,0 +1,8 @@
+[2026-10-22T15:35:53.697609+00:00] armed: container=d6fa77a349c75c03f461f9bc8dc3fbb31489204957665bfcc393735b1aab040a mode=supervise
+[2026-10-22T15:35:53.792166+00:00] signal: T1 sock_recon <- bash: curl -s --unix-socket /var/run/docker.sock http://localhost/images/json
+[2026-10-22T15:35:53.796344+00:00] signal: T1 sock_recon <- curl: connect -> /var/run/docker.sock
+[2026-10-22T15:35:53.796368+00:00] signal: T2 docker_host_mount <- curl: connect -> /var/run/docker.sock
+[2026-10-22T15:35:53.796391+00:00] enter_supervised: severity 16 >= 6 within the last 6 steps (3 signal(s))
+[2026-10-22T15:35:55.102062+00:00] llm_classify: intent=probe docker socket category=decisive action=reject
+[2026-10-22T15:35:55.104070+00:00] reject: HELD, container stays frozen: REJECT: probe docker socket [decisive]: The action connects to the Docker socket, indicating an attempt to access host r
+[2026-10-22T15:35:55.104099+00:00] end: paused=True events_seen=8

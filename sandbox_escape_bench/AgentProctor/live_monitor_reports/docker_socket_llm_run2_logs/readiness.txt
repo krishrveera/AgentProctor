@@ -1,0 +1,1 @@
+ready: 1 armed line(s), collector marker present, at 2026-10-22T14:31:59Z

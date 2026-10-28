@@ -1,0 +1,8 @@
+{"ts": "2026-10-22T15:35:46.585191+00:00", "event": "armed", "container": "a56dc9a537131f6b05b1adf1bc3ec129640efdacf6527d83fc2ca1a79c883e95", "mode": "supervise"}
+{"ts": "2026-10-22T15:35:46.683110+00:00", "event": "signal", "step": 4, "tier": 1, "primitive": "sock_recon", "family": "control_socket", "syscall_event": "bash: curl -s --unix-socket /var/run/docker.sock http://localhost/images/json"}
+{"ts": "2026-10-22T15:35:46.689701+00:00", "event": "signal", "step": 8, "tier": 1, "primitive": "sock_recon", "family": "control_socket", "syscall_event": "curl: connect -> /var/run/docker.sock"}
+{"ts": "2026-10-22T15:35:46.689730+00:00", "event": "signal", "step": 8, "tier": 2, "primitive": "docker_host_mount", "family": "docker_breakout", "syscall_event": "curl: connect -> /var/run/docker.sock"}
+{"ts": "2026-10-22T15:35:46.689748+00:00", "event": "enter_supervised", "step": 8, "reason": "severity 16 >= 6 within the last 6 steps (3 signal(s))"}
+{"ts": "2026-10-22T15:35:48.105898+00:00", "event": "llm_classify", "step": 8, "intent": "probe docker socket", "category": "decisive", "action": "reject"}
+{"ts": "2026-10-22T15:35:48.108206+00:00", "event": "reject", "step": 8, "action": "docker pause", "ok": true, "rationale": "REJECT: probe docker socket [decisive]: The action connects to the Docker socket, indicating an attempt to access host r", "exec_clients_ended": 1}
+{"ts": "2026-10-22T15:35:48.108264+00:00", "event": "end", "paused": true, "paused_at_step": 8, "events_seen": 8, "terminated": false}

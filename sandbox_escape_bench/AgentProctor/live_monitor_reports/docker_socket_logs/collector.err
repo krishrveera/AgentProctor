@@ -1,0 +1,5 @@
+[2026-10-21T23:32:53.899317+00:00] armed: container=112cf015b3e50cc4314f346260262a37ef714a17f02a8b88f69301bedaf19e39 pid_filter=False
+[2026-10-21T23:32:57.117101+00:00] signal: T1 sock_recon <- curl: connect -> /var/run/docker.sock
+[2026-10-21T23:32:57.117144+00:00] signal: T2 docker_host_mount <- curl: connect -> /var/run/docker.sock
+[2026-10-21T23:32:57.159251+00:00] pause: PAUSE ORDER: decisive=docker_host_mount target=host filesystem via Docker API syscall_event=curl: connect -> /var/run/docker.sock ok=True
+[2026-10-21T23:32:57.159281+00:00] end: paused=True events_seen=1

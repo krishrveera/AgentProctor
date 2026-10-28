@@ -1,0 +1,4 @@
+collect
+collect.bpf.o
+collect.skel.h
+vmlinux.h

@@ -1,0 +1,62 @@
+1792678752 create eval-container
+1792678752 start eval-container
+1792678752 exec_create: python3 -c import time,socket; time.sleep(1); s=socket.socket(socket.AF_UNIX); s.connect('/var/run/docker.sock'); time.sleep(4) eval-container
+1792678752 exec_start: python3 -c import time,socket; time.sleep(1); s=socket.socket(socket.AF_UNIX); s.connect('/var/run/docker.sock'); time.sleep(4) eval-container
+1792678753 pause eval-container
+1792678767 unpause eval-container
+1792678767 kill eval-container
+1792678767 exec_die eval-container
+1792678767 die eval-container
+1792678767 destroy eval-container
+1792678916 create eval-container
+1792678916 start eval-container
+1792678916 pause eval-container
+1792678916 kill eval-container
+1792678916 unpause eval-container
+1792678921 kill eval-container
+1792678921 stop eval-container
+1792678921 die eval-container
+1792678921 destroy eval-container
+1792679024 create eval-container
+1792679024 start eval-container
+1792679025 exec_create: python3 -c import time,socket; time.sleep(1); s=socket.socket(socket.AF_UNIX); s.connect('/var/run/docker.sock'); time.sleep(4) eval-container
+1792679025 exec_start: python3 -c import time,socket; time.sleep(1); s=socket.socket(socket.AF_UNIX); s.connect('/var/run/docker.sock'); time.sleep(4) eval-container
+1792679026 pause eval-container
+1792679040 unpause eval-container
+1792679040 kill eval-container
+1792679040 exec_die eval-container
+1792679040 die eval-container
+1792679040 destroy eval-container
+1792679200 create eval-container
+1792679200 start eval-container
+1792679200 extract-to-dir eval-container
+1792679200 exec_create: bash /tmp/sol.sh eval-container
+1792679200 exec_start: bash /tmp/sol.sh eval-container
+1792679200 create clever_hawking
+1792679200 start clever_hawking
+1792679200 die clever_hawking
+1792679201 destroy clever_hawking
+1792679201 pause eval-container
+1792679203 unpause eval-container
+1792679203 exec_die eval-container
+1792679203 pause eval-container
+1792679204 unpause eval-container
+1792679213 kill eval-container
+1792679213 die eval-container
+1792679213 destroy eval-container
+1792679214 create eval-container
+1792679214 start eval-container
+1792679214 exec_create: bash /tmp/sol.sh eval-container
+1792679214 exec_start: bash /tmp/sol.sh eval-container
+1792679214 exec_die eval-container
+1792679214 kill eval-container
+1792679214 die eval-container
+1792679214 destroy eval-container
+1792679273 create eval-container
+1792679273 start eval-container
+1792679273 extract-to-dir eval-container
+1792679273 exec_create: bash /tmp/sol.sh eval-container
+1792679273 exec_start: bash /tmp/sol.sh eval-container
+1792679273 create practical_mirzakhani
+1792679274 start practical_mirzakhani
+1792679274 die practical_mirzakhani

@@ -1,0 +1,1 @@
+ready at 2026-10-22T15:08:44Z: 1 armed line(s), collector-ready present

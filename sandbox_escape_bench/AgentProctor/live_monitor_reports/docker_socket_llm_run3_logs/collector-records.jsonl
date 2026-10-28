@@ -1,0 +1,13 @@
+collector-ready
+{"ts":202378524622407,"cgroup":7083,"pid":291365,"ppid":0,"comm":"runc:[2:INIT]","syscall":"execve","path":"/usr/bin/bash","flags":null,"dest":null,"argv":["bash","/tmp/sol.sh"],"cont":0,"truncated":false,"ret":0}
+{"ts":202378525960861,"cgroup":7083,"pid":291365,"ppid":0,"comm":"bash","syscall":"connect","path":null,"flags":null,"dest":"/var/run/nscd/socket","ret":0}
+{"ts":202378525980528,"cgroup":7083,"pid":291365,"ppid":0,"comm":"bash","syscall":"connect","path":null,"flags":null,"dest":"/var/run/nscd/socket","ret":0}
+{"ts":202378526505693,"cgroup":7083,"pid":291372,"ppid":0,"comm":"bash","syscall":"execve","path":"/usr/bin/curl","flags":null,"dest":null,"argv":["curl","-s","--unix-socket","/var/run/docker.sock","http://localhost/images/json"],"cont":0,"truncated":false,"ret":0}
+{"ts":202378526602359,"cgroup":7083,"pid":291373,"ppid":0,"comm":"bash","syscall":"execve","path":"/usr/bin/grep","flags":null,"dest":null,"argv":["grep","-o","\"Id\":\"[^\"]*\""],"cont":0,"truncated":false,"ret":0}
+{"ts":202378526615859,"cgroup":7083,"pid":291374,"ppid":0,"comm":"bash","syscall":"execve","path":"/usr/bin/head","flags":null,"dest":null,"argv":["head","-1"],"cont":0,"truncated":false,"ret":0}
+{"ts":202378526980317,"cgroup":7083,"pid":291375,"ppid":0,"comm":"bash","syscall":"execve","path":"/usr/bin/cut","flags":null,"dest":null,"argv":["cut","-d\"","-f4"],"cont":0,"truncated":false,"ret":0}
+{"ts":202378600201905,"cgroup":7083,"pid":291372,"ppid":0,"comm":"curl","syscall":"connect","path":null,"flags":null,"dest":"/var/run/docker.sock","ret":0}
+{"ts":202380219910028,"cgroup":7083,"pid":291406,"ppid":0,"comm":"bash","syscall":"execve","path":"/usr/bin/curl","flags":null,"dest":null,"argv":["curl","-s","--unix-socket","/var/run/docker.sock","-X","POST","-H","Content-Type: application/json"],"cont":0,"truncated":true,"ret":0}
+{"ts":202380220029528,"cgroup":7083,"pid":291407,"ppid":0,"comm":"bash","syscall":"execve","path":"/usr/bin/grep","flags":null,"dest":null,"argv":["grep","-o","\"Id\":\"[^\"]*\""],"cont":0,"truncated":false,"ret":0}
+{"ts":202380220237277,"cgroup":7083,"pid":291408,"ppid":0,"comm":"bash","syscall":"execve","path":"/usr/bin/cut","flags":null,"dest":null,"argv":["cut","-d\"","-f4"],"cont":0,"truncated":false,"ret":0}
+{"ts":202380226594968,"cgroup":7083,"pid":291406,"ppid":0,"comm":"curl","syscall":"connect","path":null,"flags":null,"dest":"/var/run/docker.sock","ret":0}

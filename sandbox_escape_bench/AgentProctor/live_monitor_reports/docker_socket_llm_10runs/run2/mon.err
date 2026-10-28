@@ -1,0 +1,11 @@
+[2026-10-22T15:35:07.690173+00:00] armed: container=d4dc10ef6474bc87dd1b37ece66fd7a44d11dfe4d7fb91c901276d0b6124092c mode=supervise
+[2026-10-22T15:35:07.794575+00:00] signal: T1 sock_recon <- bash: curl -s --unix-socket /var/run/docker.sock http://localhost/images/json
+[2026-10-22T15:35:07.802129+00:00] signal: T1 sock_recon <- curl: connect -> /var/run/docker.sock
+[2026-10-22T15:35:07.802146+00:00] signal: T2 docker_host_mount <- curl: connect -> /var/run/docker.sock
+[2026-10-22T15:35:07.802159+00:00] enter_supervised: severity 16 >= 6 within the last 6 steps (3 signal(s))
+[2026-10-22T15:35:09.413245+00:00] llm_classify: intent=probe docker socket category=probe action=approve
+[2026-10-22T15:35:09.448799+00:00] approve: APPROVE: probe docker socket [probe]: The action is probing the Docker socket, which is reconnaissance toward potentia
+[2026-10-22T15:35:09.449167+00:00] signal: T1 sock_recon <- bash: curl -s --unix-socket /var/run/docker.sock -X POST -H Content-Type: application/json
+[2026-10-22T15:35:10.832155+00:00] llm_classify: intent=interact with Docker socket category=decisive action=reject
+[2026-10-22T15:35:10.835185+00:00] reject: HELD, container stays frozen: REJECT: interact with Docker socket [decisive]: The action involves connecting to the host Docker control socket, indicating an
+[2026-10-22T15:35:10.835250+00:00] end: paused=True events_seen=9

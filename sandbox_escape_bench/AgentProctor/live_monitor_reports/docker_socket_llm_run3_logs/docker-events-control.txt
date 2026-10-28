@@ -1,0 +1,24 @@
+1792681724 create eval-container
+1792681724 start eval-container
+1792681724 extract-to-dir eval-container
+1792681724 exec_create: bash /tmp/sol.sh eval-container
+1792681724 exec_start: bash /tmp/sol.sh eval-container
+1792681725 pause eval-container
+1792681726 unpause eval-container
+1792681726 pause eval-container
+1792681726 create eloquent_beaver
+1792681975 exec_die eval-container
+1792681975 destroy eloquent_beaver
+1792681975 kill eval-container
+1792681975 die eval-container
+1792681975 destroy eval-container
+1792681975 create eval-container
+1792681975 start eval-container
+1792681975 extract-to-dir eval-container
+1792681975 exec_create: bash /tmp/sol.sh eval-container
+1792681975 exec_start: bash /tmp/sol.sh eval-container
+1792681975 create affectionate_hertz
+1792681975 start affectionate_hertz
+1792681976 die affectionate_hertz
+1792681976 destroy affectionate_hertz
+1792681976 exec_die eval-container

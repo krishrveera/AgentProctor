@@ -1,0 +1,1 @@
+monitor armed for eval-container (log: /home/ritvik/ap/collector/ten/run10/mon.log)

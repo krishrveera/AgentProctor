@@ -1,0 +1,5 @@
+{"ts": "2026-10-21T23:32:53.899317+00:00", "event": "armed", "container": "112cf015b3e50cc4314f346260262a37ef714a17f02a8b88f69301bedaf19e39", "pid_filter": false}
+{"ts": "2026-10-21T23:32:57.117101+00:00", "event": "signal", "step": 1, "tier": 1, "primitive": "sock_recon", "family": "control_socket", "target": "host Docker control socket", "syscall_event": "curl: connect -> /var/run/docker.sock", "pid": 73107}
+{"ts": "2026-10-21T23:32:57.117144+00:00", "event": "signal", "step": 1, "tier": 2, "primitive": "docker_host_mount", "family": "docker_breakout", "target": "host filesystem via Docker API", "syscall_event": "curl: connect -> /var/run/docker.sock", "pid": 73107}
+{"ts": "2026-10-21T23:32:57.159251+00:00", "event": "pause", "step": 1, "ok": true, "action": "docker pause", "primitive": "docker_host_mount", "family": "docker_breakout", "target": "host filesystem via Docker API", "syscall_event": "curl: connect -> /var/run/docker.sock"}
+{"ts": "2026-10-21T23:32:57.159281+00:00", "event": "end", "paused": true, "paused_at_step": 1, "events_seen": 1, "signals": 2}

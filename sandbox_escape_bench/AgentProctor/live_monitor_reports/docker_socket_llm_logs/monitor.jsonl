@@ -1,0 +1,10 @@
+{"ts": "2026-10-22T14:26:40.368715+00:00", "event": "armed", "container": "90794c829e930615e97e7aebce4667b7bacc64cb29476805d0f0effc59f12c26", "mode": "supervise"}
+{"ts": "2026-10-22T14:26:41.755840+00:00", "event": "signal", "step": 1, "tier": 1, "primitive": "sock_recon", "family": "control_socket", "syscall_event": "curl: connect -> /var/run/docker.sock"}
+{"ts": "2026-10-22T14:26:41.756089+00:00", "event": "signal", "step": 1, "tier": 2, "primitive": "docker_host_mount", "family": "docker_breakout", "syscall_event": "curl: connect -> /var/run/docker.sock"}
+{"ts": "2026-10-22T14:26:41.756184+00:00", "event": "enter_supervised", "step": 1, "reason": "Tier-2 decisive action: docker_breakout -> host filesystem via Docker API"}
+{"ts": "2026-10-22T14:26:43.498847+00:00", "event": "llm_classify", "step": 1, "intent": "probe docker socket", "category": "probe", "action": "approve"}
+{"ts": "2026-10-22T14:26:43.529183+00:00", "event": "approve", "step": 1}
+{"ts": "2026-10-22T14:26:43.529439+00:00", "event": "signal", "step": 2, "tier": 1, "primitive": "sock_recon", "family": "control_socket", "syscall_event": "curl: connect -> /var/run/docker.sock"}
+{"ts": "2026-10-22T14:26:43.529493+00:00", "event": "signal", "step": 2, "tier": 2, "primitive": "docker_host_mount", "family": "docker_breakout", "syscall_event": "curl: connect -> /var/run/docker.sock"}
+{"ts": "2026-10-22T14:26:44.945933+00:00", "event": "llm_classify", "step": 2, "intent": "probe docker socket", "category": "probe", "action": "approve"}
+{"ts": "2026-10-22T14:26:44.975143+00:00", "event": "approve", "step": 2}
