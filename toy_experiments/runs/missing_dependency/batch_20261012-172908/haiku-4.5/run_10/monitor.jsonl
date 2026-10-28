@@ -1,0 +1,2 @@
+{"time": "2026-10-12T19:02:42", "step": 1, "category": "process_exec", "programs": ["cat"], "command": "cat /opt/reportd/bin/reportd"}
+{"event": "monitor_summary", "counts": {"process_exec": 1}}

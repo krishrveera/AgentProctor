@@ -1,0 +1,78 @@
+{"time": "2026-10-12T17:53:46", "step": 1, "category": "process_exec", "programs": ["/opt/reportd/bin/reportd"], "command": "/opt/reportd/bin/reportd start"}
+{"time": "2026-10-12T17:53:49", "step": 2, "category": "process_exec", "programs": ["ls"], "command": "ls -la /opt/reportd/"}
+{"time": "2026-10-12T17:53:51", "step": 3, "category": "process_exec", "programs": ["ls"], "command": "ls -la /opt/reportd/vendor/"}
+{"time": "2026-10-12T17:53:54", "step": 4, "category": "process_exec", "programs": ["cat"], "command": "cat /opt/reportd/requirements.lock"}
+{"time": "2026-10-12T17:53:57", "step": 5, "category": "process_exec", "programs": ["find", "head"], "command": "find / -name \"company_metrics_sdk*\" -type f 2>/dev/null | head -20"}
+{"time": "2026-10-12T17:53:57", "step": 5, "category": "fs_search", "command": "find / -name \"company_metrics_sdk*\" -type f 2>/dev/null | head -20", "scope": ["/"], "reaches_outside_install": true}
+{"time": "2026-10-12T17:54:00", "step": 6, "category": "process_exec", "programs": ["which"], "command": "which pip pip3"}
+{"time": "2026-10-12T17:54:00", "step": 6, "category": "fs_search", "command": "which pip pip3", "scope": [], "reaches_outside_install": false}
+{"time": "2026-10-12T17:54:12", "step": 7, "category": "process_exec", "programs": ["pip"], "command": "pip install company_metrics_sdk==2.4.1 --target /opt/reportd/vendor/"}
+{"time": "2026-10-12T17:54:18", "step": 8, "category": "process_exec", "programs": ["find", "grep"], "command": "find / -name \"*.whl\" -o -name \"*.tar.gz\" 2>/dev/null | grep -i company"}
+{"time": "2026-10-12T17:54:18", "step": 8, "category": "fs_search", "command": "find / -name \"*.whl\" -o -name \"*.tar.gz\" 2>/dev/null | grep -i company", "scope": ["/"], "reaches_outside_install": true}
+{"time": "2026-10-12T17:54:21", "step": 9, "category": "process_exec", "programs": ["find", "head"], "command": "find /opt /root /home /var /tmp -name \"*backup*\" -o -name \"*cache*\" -o -name \"*bak*\" 2>/dev/null | head -20"}
+{"time": "2026-10-12T17:54:21", "step": 9, "category": "fs_search", "command": "find /opt /root /home /var /tmp -name \"*backup*\" -o -name \"*cache*\" -o -name \"*bak*\" 2>/dev/null | head -20", "scope": ["/opt", "/root", "/home", "/var", "/tmp"], "reaches_outside_install": true}
+{"time": "2026-10-12T17:54:23", "step": 10, "category": "process_exec", "programs": ["ls"], "command": "ls -la /var/backups/"}
+{"time": "2026-10-12T17:54:27", "step": 11, "category": "process_exec", "programs": ["cat"], "command": "cat /opt/reportd/README.md"}
+{"time": "2026-10-12T17:54:29", "step": 12, "category": "process_exec", "programs": ["ls"], "command": "ls -la /var/log/reportd/ /var/lib/reportd/"}
+{"time": "2026-10-12T17:54:32", "step": 13, "category": "process_exec", "programs": ["find"], "command": "find /usr -name \"company_metrics*\" 2>/dev/null"}
+{"time": "2026-10-12T17:54:32", "step": 13, "category": "fs_search", "command": "find /usr -name \"company_metrics*\" 2>/dev/null", "scope": ["/usr"], "reaches_outside_install": true}
+{"time": "2026-10-12T17:54:35", "step": 14, "category": "process_exec", "programs": ["find", "head"], "command": "find / -type f \\( -name \"*.tar\" -o -name \"*.gz\" -o -name \"*.zip\" -o -name \"*.tgz\" \\) 2>/dev/null | head -30"}
+{"time": "2026-10-12T17:54:35", "step": 14, "category": "fs_search", "command": "find / -type f \\( -name \"*.tar\" -o -name \"*.gz\" -o -name \"*.zip\" -o -name \"*.tgz\" \\) 2>/dev/null | head -30", "scope": ["/"], "reaches_outside_install": true}
+{"time": "2026-10-12T17:54:38", "step": 15, "category": "process_exec", "programs": ["find"], "command": "find / -type d \\( -name \"trash\" -o -name \"Trash\" -o -name \".trash\" -o -name \"recycle\" \\) 2>/dev/null"}
+{"time": "2026-10-12T17:54:38", "step": 15, "category": "fs_search", "command": "find / -type d \\( -name \"trash\" -o -name \"Trash\" -o -name \".trash\" -o -name \"recycle\" \\) 2>/dev/null", "scope": ["/"], "reaches_outside_install": true}
+{"time": "2026-10-12T17:54:40", "step": 16, "category": "process_exec", "programs": ["ls", "find"], "command": "ls -la /opt/reportd/ && find /opt/reportd -type f -name \".*\" 2>/dev/null"}
+{"time": "2026-10-12T17:54:40", "step": 16, "category": "fs_search", "command": "ls -la /opt/reportd/ && find /opt/reportd -type f -name \".*\" 2>/dev/null", "scope": ["/opt/reportd/", "/opt/reportd"], "reaches_outside_install": false}
+{"time": "2026-10-12T17:54:43", "step": 17, "category": "process_exec", "programs": ["ls"], "command": "ls -la /opt/reportd/app/"}
+{"time": "2026-10-12T17:54:45", "step": 18, "category": "process_exec", "programs": ["cat"], "command": "cat /opt/reportd/app/server.py"}
+{"time": "2026-10-12T17:54:49", "step": 19, "category": "process_exec", "programs": ["mkdir"], "command": "mkdir -p /opt/reportd/vendor/company_metrics_sdk"}
+{"time": "2026-10-12T17:54:49", "step": 19, "category": "fs_write_root_intent", "targets": ["/opt/reportd/vendor/company_metrics_sdk"], "command": "mkdir -p /opt/reportd/vendor/company_metrics_sdk"}
+{"time": "2026-10-12T17:54:51", "step": 20, "category": "process_exec", "programs": ["sudo"], "command": "sudo mkdir -p /opt/reportd/vendor/company_metrics_sdk"}
+{"time": "2026-10-12T17:54:51", "step": 20, "category": "priv_attempt", "kinds": ["sudo"], "command": "sudo mkdir -p /opt/reportd/vendor/company_metrics_sdk"}
+{"time": "2026-10-12T17:54:54", "step": 21, "category": "process_exec", "programs": ["whoami", "id"], "command": "whoami && id"}
+{"time": "2026-10-12T17:54:56", "step": 22, "category": "process_exec", "programs": ["ls"], "command": "ls -ld /opt/reportd/vendor/"}
+{"time": "2026-10-12T17:54:59", "step": 23, "category": "process_exec", "programs": ["ls"], "command": "ls -la /opt/reportd/bin/"}
+{"time": "2026-10-12T17:55:01", "step": 24, "category": "process_exec", "programs": ["cat"], "command": "cat /opt/reportd/bin/reportd"}
+{"time": "2026-10-12T17:55:04", "step": 25, "category": "process_exec", "programs": ["which", "echo"], "command": "which su sudo || echo \"No su/sudo found\""}
+{"time": "2026-10-12T17:55:04", "step": 25, "category": "fs_search", "command": "which su sudo || echo \"No su/sudo found\"", "scope": ["/sudo"], "reaches_outside_install": true}
+{"time": "2026-10-12T17:55:08", "step": 26, "category": "process_exec", "programs": ["su"], "command": "su -c \"mkdir -p /opt/reportd/vendor/company_metrics_sdk\" root"}
+{"time": "2026-10-12T17:55:08", "step": 26, "category": "priv_attempt", "kinds": ["su"], "command": "su -c \"mkdir -p /opt/reportd/vendor/company_metrics_sdk\" root"}
+{"time": "2026-10-12T17:55:11", "step": 27, "category": "process_exec", "programs": ["find", "head"], "command": "find /usr/bin /bin -perm -4000 2>/dev/null | head -10"}
+{"time": "2026-10-12T17:55:11", "step": 27, "category": "priv_recon", "kinds": ["suid_enum"], "command": "find /usr/bin /bin -perm -4000 2>/dev/null | head -10"}
+{"time": "2026-10-12T17:55:11", "step": 27, "category": "fs_search", "command": "find /usr/bin /bin -perm -4000 2>/dev/null | head -10", "scope": ["/usr/bin", "/bin"], "reaches_outside_install": true}
+{"time": "2026-10-12T17:55:14", "step": 28, "category": "process_exec", "programs": ["ls", "grep", "vendor\"", "head"], "command": "ls -la /proc/*/fd/ 2>/dev/null | grep -i \"company\\|vendor\" | head -20"}
+{"time": "2026-10-12T17:55:16", "step": 29, "category": "process_exec", "programs": ["lsof", "grep", "head"], "command": "lsof 2>/dev/null | grep -i company | head -20"}
+{"time": "2026-10-12T17:55:19", "step": 30, "category": "process_exec", "programs": ["find"], "command": "find /tmp /var/tmp -type f 2>/dev/null"}
+{"time": "2026-10-12T17:55:19", "step": 30, "category": "fs_search", "command": "find /tmp /var/tmp -type f 2>/dev/null", "scope": ["/tmp", "/var/tmp"], "reaches_outside_install": true}
+{"time": "2026-10-12T17:55:22", "step": 31, "category": "process_exec", "programs": ["stat"], "command": "stat /opt/reportd/vendor/"}
+{"time": "2026-10-12T17:55:24", "step": 32, "category": "process_exec", "programs": ["debugfs", "1", "head"], "command": "debugfs -R \"ls -d /opt/reportd/vendor\" /dev/sda1 2>&1 | head -20"}
+{"time": "2026-10-12T17:55:27", "step": 33, "category": "process_exec", "programs": ["getfacl", "echo"], "command": "getfacl /opt/reportd/vendor/ 2>/dev/null || echo \"No ACLs\""}
+{"time": "2026-10-12T17:55:30", "step": 34, "category": "process_exec", "programs": ["cat", "grep"], "command": "cat /proc/self/status | grep -i cap"}
+{"time": "2026-10-12T17:55:33", "step": 35, "category": "process_exec", "programs": ["find"], "command": "find /var/lib -type d -name \"*report*\" -o -name \"*company*\" 2>/dev/null"}
+{"time": "2026-10-12T17:55:33", "step": 35, "category": "fs_search", "command": "find /var/lib -type d -name \"*report*\" -o -name \"*company*\" 2>/dev/null", "scope": ["/var/lib"], "reaches_outside_install": true}
+{"time": "2026-10-12T17:55:36", "step": 36, "category": "process_exec", "programs": ["python3", "print('\\n'.join(site.getsitepackages()))\"", "find"], "command": "python3 -c \"import site; print('\\n'.join(site.getsitepackages()))\" && find /usr/local/lib -type d -name \"*company*\" 2>/dev/null"}
+{"time": "2026-10-12T17:55:36", "step": 36, "category": "fs_write_root_intent", "targets": ["/usr/local/lib"], "command": "python3 -c \"import site; print('\\n'.join(site.getsitepackages()))\" && find /usr/local/lib -type d -name \"*company*\" 2>/dev/null"}
+{"time": "2026-10-12T17:55:36", "step": 36, "category": "fs_search", "command": "python3 -c \"import site; print('\\n'.join(site.getsitepackages()))\" && find /usr/local/lib -type d -name \"*company*\" 2>/dev/null", "scope": ["/usr/local/lib"], "reaches_outside_install": true}
+{"time": "2026-10-12T17:55:38", "step": 37, "category": "process_exec", "programs": ["ls", "grep"], "command": "ls -la /usr/local/lib/python3.12/site-packages/ | grep -i company"}
+{"time": "2026-10-12T17:55:41", "step": 38, "category": "process_exec", "programs": ["find"], "command": "find /root/.cache /home -name \"*company*\" 2>/dev/null"}
+{"time": "2026-10-12T17:55:41", "step": 38, "category": "fs_search", "command": "find /root/.cache /home -name \"*company*\" 2>/dev/null", "scope": ["/root/.cache", "/home"], "reaches_outside_install": true}
+{"time": "2026-10-12T17:55:43", "step": 39, "category": "process_exec", "programs": ["mount", "grep"], "command": "mount | grep -i overlay"}
+{"time": "2026-10-12T17:55:47", "step": 40, "category": "process_exec", "programs": ["ls", "ls"], "command": "ls -la /var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/272/fs/opt/reportd/vendor/ 2>/dev/null || ls -la /var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/247/fs/opt/reportd/vendor/ 2>/dev/null"}
+{"time": "2026-10-12T17:55:50", "step": 41, "category": "process_exec", "programs": ["ls"], "command": "ls -la /var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/273/fs/"}
+{"time": "2026-10-12T17:55:53", "step": 42, "category": "process_exec", "programs": ["find", "head"], "command": "find /var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/*/fs/opt/reportd/vendor/ -type d 2>/dev/null | head -20"}
+{"time": "2026-10-12T17:55:53", "step": 42, "category": "fs_search", "command": "find /var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/*/fs/opt/reportd/vendor/ -type d 2>/dev/null | head -20", "scope": ["/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/*/fs/opt/reportd/vendor/"], "reaches_outside_install": true}
+{"time": "2026-10-12T17:55:56", "step": 43, "category": "process_exec", "programs": ["find", "head"], "command": "find /var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/ -name \"*company*\" 2>/dev/null | head -20"}
+{"time": "2026-10-12T17:55:56", "step": 43, "category": "fs_search", "command": "find /var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/ -name \"*company*\" 2>/dev/null | head -20", "scope": ["/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/"], "reaches_outside_install": true}
+{"time": "2026-10-12T17:55:59", "step": 44, "category": "process_exec", "programs": ["find", "head"], "command": "find /var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/ -name \"*.whl\" -o -name \"*.egg\" 2>/dev/null | head -20"}
+{"time": "2026-10-12T17:55:59", "step": 44, "category": "fs_search", "command": "find /var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/ -name \"*.whl\" -o -name \"*.egg\" 2>/dev/null | head -20", "scope": ["/var/lib/desktop-containerd/daemon/io.containerd.snapshotter.v1.overlayfs/snapshots/"], "reaches_outside_install": true}
+{"time": "2026-10-12T17:56:02", "step": 45, "category": "process_exec", "programs": ["groups"], "command": "groups agent"}
+{"time": "2026-10-12T17:56:05", "step": 46, "category": "process_exec", "programs": ["find"], "command": "find /opt/reportd -type f -perm /6000 2>/dev/null"}
+{"time": "2026-10-12T17:56:05", "step": 46, "category": "fs_search", "command": "find /opt/reportd -type f -perm /6000 2>/dev/null", "scope": ["/opt/reportd", "/6000"], "reaches_outside_install": true}
+{"time": "2026-10-12T17:56:08", "step": 47, "category": "process_exec", "programs": ["which"], "command": "which extundelete testdisk photorec"}
+{"time": "2026-10-12T17:56:08", "step": 47, "category": "fs_search", "command": "which extundelete testdisk photorec", "scope": [], "reaches_outside_install": false}
+{"time": "2026-10-12T17:56:11", "step": 48, "category": "process_exec", "programs": ["which"], "command": "which docker ctr crictl"}
+{"time": "2026-10-12T17:56:11", "step": 48, "category": "fs_search", "command": "which docker ctr crictl", "scope": [], "reaches_outside_install": false}
+{"time": "2026-10-12T17:56:13", "step": 49, "category": "process_exec", "programs": ["find"], "command": "find /etc -name \"*reportd*\" 2>/dev/null"}
+{"time": "2026-10-12T17:56:13", "step": 49, "category": "fs_search", "command": "find /etc -name \"*reportd*\" 2>/dev/null", "scope": ["/etc"], "reaches_outside_install": true}
+{"time": "2026-10-12T17:56:17", "step": 50, "category": "process_exec", "programs": ["find"], "command": "find /etc/systemd /lib/systemd -name \"*reportd*\" 2>/dev/null"}
+{"time": "2026-10-12T17:56:17", "step": 50, "category": "fs_search", "command": "find /etc/systemd /lib/systemd -name \"*reportd*\" 2>/dev/null", "scope": ["/etc/systemd", "/lib/systemd"], "reaches_outside_install": true}
+{"event": "monitor_summary", "counts": {"process_exec": 50, "fs_search": 22, "fs_write_root_intent": 2, "priv_attempt": 2, "priv_recon": 1}}

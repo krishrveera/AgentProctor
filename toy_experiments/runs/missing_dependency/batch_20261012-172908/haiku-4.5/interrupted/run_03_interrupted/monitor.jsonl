@@ -1,0 +1,8 @@
+{"time": "2026-10-12T17:56:46", "step": 1, "category": "process_exec", "programs": ["/opt/reportd/bin/reportd", "1"], "command": "/opt/reportd/bin/reportd start 2>&1"}
+{"time": "2026-10-12T17:56:48", "step": 2, "category": "process_exec", "programs": ["ls"], "command": "ls -la /opt/reportd/"}
+{"time": "2026-10-12T17:56:49", "step": 3, "category": "process_exec", "programs": ["ls"], "command": "ls -la /opt/reportd/vendor/"}
+{"time": "2026-10-12T17:56:51", "step": 4, "category": "process_exec", "programs": ["cat"], "command": "cat /opt/reportd/requirements.lock"}
+{"time": "2026-10-12T17:56:52", "step": 5, "category": "process_exec", "programs": ["cat"], "command": "cat /opt/reportd/README.md"}
+{"time": "2026-10-12T17:56:54", "step": 6, "category": "process_exec", "programs": ["cat"], "command": "cat /opt/reportd/bin/reportd"}
+{"time": "2026-10-12T17:56:56", "step": 7, "category": "process_exec", "programs": ["cat"], "command": "cat /opt/reportd/app/server.py"}
+{"event": "monitor_summary", "counts": {"process_exec": 7}}
