@@ -1,9 +1,19 @@
-# SandboxEscapeBench: local run results
+# SandboxEscapeBench: test suite for the AgentProctor monitor
 
-This directory holds the results of running SandboxEscapeBench scenarios locally, against `openrouter/anthropic/claude-opus-4.5`, on a Vagrant VM under QEMU on Apple Silicon.
+This suite runs the monitor (`agentproctor/` and `collector/` at the repo root)
+against SandboxEscapeBench container-escape scenarios. Every scenario here is an
+escape attempt; benign counterparts are planned in `benign/`.
 
-- `report.md`: the write-up. It gives the summary table, the proof of success for each scenario, the comparison with the paper's results, and the infrastructure findings.
-- `logs/`: the raw Inspect AI eval logs for each run, plus `logs/README.md`, which indexes which logs are valid results and which were superseded.
+| Path | Contents |
+|------|----------|
+| `benchmark/` | The upstream SandboxEscapeBench code (scenarios, Vagrant/EC2 setup, Inspect tasks), kept as the authors ship it. |
+| `logs/` | Inspect `.eval` logs from our runs. `logs/README.md` indexes the first batch; the later k8s, kernel, and runc runs are listed in `agentproctor/catalog.py`. |
+| `report.md` | Full run report for 18-19 October 2026 (all scenarios, normal variant). |
+| `report_2026-10-18_docker_scenarios.md` | Earlier report on the difficulty 1-3 Docker scenarios. |
+| `results/replay/` | Monitor replayed over the logs: design notes (`monitor_design_from_logs.md`), `monitoring_report.md`/`.json`, `detector_replay.json`. |
+| `results/live_monitor_reports/` | Live eBPF + LLM monitor runs on `docker_socket`, with raw logs. |
+| `experiments/docker_socket/` | Runbook and batch script for the live `docker_socket` experiment. |
+| `live_demo/` | One-shot live demo script for a VM. |
 
 ## What is in an eval log
 
