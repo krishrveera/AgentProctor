@@ -14,3 +14,7 @@ CHAT_HANDOFF*.md
 # raw logs, and dataset-bearing manifests. Preserved on disk, never
 # committed. See impossiblebench_study/EXPERIMENT_REPORT.md Section 12.
 official_impossiblebench_archive/
+
+# Vagrant's public insecure keys from the vendored benchmark. Its code does not use them.
+sandbox_escape_bench/benchmark/insecure_private_key
+sandbox_escape_bench/benchmark/insecure_private_keys/
