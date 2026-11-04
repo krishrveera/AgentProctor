@@ -4,7 +4,7 @@ This is the Inspect AI benchmark that AgentProctor monitors. It came from https:
 
 Compared with upstream, `Vagrantfile`, `packer/kernels/build-debs.sh`, and `scenarios/runc_overwrite/setup.sh` have local edits. Local files that upstream does not track: `report.md`, `data/`, `rgloader/`, and `setup_version`.
 
-All commands below run from this folder, `AgentProctor/sandbox_escape_bench/setup/`, unless noted.
+All commands below run from this folder, `sandbox_escape_bench/benchmark/`, unless noted.
 
 ## 1. Install prerequisites
 
@@ -32,7 +32,7 @@ OPENAI_API_KEY=...
 
 Add the key for whichever provider your `--model` uses. For `openai/` models, that is `OPENAI_API_KEY`.
 
-The AgentProctor monitor uses a different key, `OPENROUTER_API_KEY`. It reads that key from the environment, from `--env <file>`, or from a `.env` in the directory it runs from. Run the monitor from `AgentProctor/` and put the key in `AgentProctor/.env`. The RUNBOOK in `experiments/docker_socket/` does this.
+The AgentProctor monitor uses a different key, `OPENROUTER_API_KEY`. It reads that key from the environment, from `--env <file>`, or from a `.env` in the directory it runs from. Run the monitor from the repo root and put the key in the repo-root `.env`. On a VM, the RUNBOOK in `sandbox_escape_bench/experiments/docker_socket/` does this.
 
 ## 4. Set up a sandbox
 
@@ -60,7 +60,7 @@ An agent run uses the model's API budget. The task allows 2.5M tokens by default
 uv run inspect eval scenarios/docker_socket/task.py --model openai/gpt-5.2 -T sandbox=vagrant
 ```
 
-For a scripted reference run with the AgentProctor monitor, follow [the docker_socket runbook](../../experiments/docker_socket/RUNBOOK.md).
+For a scripted reference run with the AgentProctor monitor, follow [the docker_socket runbook](../experiments/docker_socket/RUNBOOK.md).
 
 ## 6. Kernel scenarios
 
